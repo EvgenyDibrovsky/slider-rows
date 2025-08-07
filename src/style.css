@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* scrollbar standard  */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2 bg-black/40;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-black/40;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-black;
+  }
+
+  .wrapper-sliders-mobile::-webkit-scrollbar {
+    @apply w-0 h-0 bg-black/40;
+  }
+}
+
+@layer components {
+
+  /* hand wave animation */
+  .hand-wave-anim {
+    transform-origin: 50% 100%;
+    animation: hand-wave 4s steps(100) infinite;
+  }
+
+  @keyframes hand-wave {
+    0% {
+      transform: rotate(-7deg);
+    }
+
+    10% {
+      transform: rotate(-7deg);
+    }
+
+    /* задержка слева */
+    50% {
+      transform: rotate(22deg);
+    }
+
+    60% {
+      transform: rotate(22deg);
+    }
+
+    /* задержка справа */
+    100% {
+      transform: rotate(-7deg);
+    }
+  }
+
+}
